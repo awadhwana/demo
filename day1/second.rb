@@ -17,8 +17,6 @@ end
 
 cust1 = Customer.new("01","'Ankit'","'kandivali'").display_details
 
-
-
 cust2 = Customer.new("01","'Deepak'","'Daishar'")
 cust2.display_details()
 class Show
