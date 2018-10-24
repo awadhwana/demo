@@ -187,7 +187,6 @@
 #p str.at(2) #same as silce with single parameter, look above
 # str.clear() #clears all elemets from array, takes no params
 #p nums.map{|i| i*2} #same as nums.collect{}
-
 #time
 
 # time = Time.new
@@ -203,3 +202,36 @@
 # puts time.min     # => 59
 # puts time.sec     # => 59
 # puts time.usec    # => 999999: microseconds
+
+#puts time.strftime("%d-%m-%Y %a %I:%M:%S %p")
+#outputs -> 23-10-2018 Tue 12:04:01 PM
+# Time Formatting Directives are used with the method Time.strftime("")
+
+#working with fikess
+# f1 = File.new("file1.txt","w+")
+# if f1
+#  f1.syswrite("Good evening, its tea time ")
+#  else
+#     puts "Unable to open file!"
+#  end
+
+#  IO.foreach("file1.txt") do |blocks|
+#     puts blocks
+#  end
+
+#exception handling
+# begin   
+#     raise 'an exception'   
+#   rescue ZeroDivisionError => e   
+#     puts "Exception Class: #{ e.class.name }"   
+#     puts "Exception Message: #{ e.message }"   
+#     puts "Exception Backtrace: #{ e.backtrace }"   
+#   end 
+
+catch :quitRequested do
+  print 'Name '
+  res = readline.chomp
+  puts throw :quitRequested, res.backtrace.inspect if res == "!"
+  print "done"
+end
+
