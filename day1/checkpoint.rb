@@ -228,10 +228,10 @@
 #     puts "Exception Backtrace: #{ e.backtrace }"   
 #   end 
 
-catch :quitRequested do
-  print 'Name '
-  res = readline.chomp
-  puts throw :quitRequested, res.backtrace.inspect if res == "!"
-  print "done"
-end
+# catch :quitRequested do
+#   print 'Name '
+#   res = readline.chomp
+#   puts throw :quitRequested, res.backtrace.inspect if res == "!"
+#   print "done"
+# end
 
